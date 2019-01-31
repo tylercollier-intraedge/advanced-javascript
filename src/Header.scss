@@ -1,0 +1,18 @@
+header.main {
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    background: darkviolet;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+
+    a {
+      color: white;
+    }
+  }
+}
