@@ -82,7 +82,7 @@ m[0].name = 'Jemira'
 
 // So what's wrong with this code?
 function render() {
-  const array = [1, 2, 3]
+  const array = [7, 9, 8]
   const max = getMax(array)
   const count = array.length
   
@@ -92,14 +92,16 @@ function render() {
   </div>`
 }
 function getMax(arr) {
-  let count = 0
+  let max = arr[arr.length - 1]
   while (arr.length) {
     arr.pop()
-    count++
+    if (arr[arr.length - 1] > max) {
+      max = arr[arr.length - 1]
+    }
   }
-  return count
+  return max
 }
-
+// console.log('render()', render())
 
 
 
