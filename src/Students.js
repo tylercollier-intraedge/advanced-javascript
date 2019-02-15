@@ -8,7 +8,7 @@ export class Students extends Component {
         <div className="list">
           {this.props.students.map(x => {
             x.name = x.name + ' is awesome!'
-            return <div>{x.name}</div>
+            return <div key={x.name}>{x.name}</div>
           })}
         </div>
       </div>
