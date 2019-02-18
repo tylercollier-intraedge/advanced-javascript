@@ -310,20 +310,10 @@ container50();
 // Have you seen an immediately invoked function expression before?
 (function() {
   const oldSetTimeout = setTimeout
-  const timeoutIds = []
   setTimeout = (fn, ms) => {
-    const timeoutId = oldSetTimeout(() => {
-      fn()
-      // Clear the timeout from our list
-      const index = timeoutIds.findIndex(timeoutId)
-      timeoutIds.splice(index, 1)
-    }, ms)
-    timeoutIds.push(timeoutId)
-  }
-  global.clearAllTimeouts = () => {
-    timeoutIds.forEach(id => {
-      clearTimeout(id)
-    })
+    // Do something extra here...
+    // Now call original setTimeout.
+    oldSetTimeout(fn, ms)
   }
 })()
 // Why would we do this?
