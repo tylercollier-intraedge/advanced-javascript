@@ -328,7 +328,9 @@ container50();
 
 // Why closures? Keeping data private? Why? It's not really about security. It's called encapsulation. Encapsulation means we can do things without exposing HOW they are done. That way, someone who uses our code doesn't rely on how we do things. If they rely on how we do things, and we change it, their code breaks.
 
-// Example: imagine we make a School class, and it has a addStudent() method that can be called many times, and a getStudents() method that returns an array. Initially 
+// Example: imagine we make a School class, and it has a addStudent(studentId, name) method that can be called many times, a deleteStudent(id) method, and a getStudents() method that returns an array. Initially we store our students in an array property named 'students'. Someone who uses our code wants to update a student, and they think to themselves "hey, rather than delete the student and re-add them, since I can access the students property directly, I'll just do that in one line of code rather than two!" Unfortunately, if we change our implementation and stop using an array and instead use an object, we have just broken our code. If this is a small company, it might not be a big deal. If it's a popular library, such a change just might "break the internet".
+
+// Challenge: do it for yourself here. Create a school class and use it as mentioned above, using addStudent and deleteStudent. Then change the class from storing students as an array to storing them as an object. Watch your code break. There's no better way to learn than to experience the "pain"; it's memorable.
 
 
 
