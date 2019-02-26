@@ -12,8 +12,8 @@ export class Cors extends Component {
   }
 
   componentDidMount() {
-    const url = 'https://mail.google.com/sync/u/0/i/bv?hl=en&c=2887'
-    axios.get(url, { waithCredentials: true })
+    const url = 'http://localhost:4000/myaccount'
+    axios.get(url)
       .then(response => this.setState({ data: response.data }))
       .catch(error => this.setState({ error }))
       .then(() => this.setState({ isLoading: false }))
@@ -28,7 +28,7 @@ export class Cors extends Component {
           ? 'Loading...'
           : data
             ? <div>
-                Data: {data[16]}
+                Account number: {data.accountNumber}
               </div>
             : <div>
                 An unexpected error occurred: {error.message}
