@@ -15,6 +15,7 @@ export class Header extends Component {
           <NavLink to="/context">Context</NavLink>
           <NavLink to="/render-props">Render Props</NavLink>
           <NavLink to="/cors">Cors</NavLink>
+          <NavLink to="/hof">HOF</NavLink>
         </nav>
       </header>
     )

@@ -8,6 +8,7 @@ import Closures from './Closures'
 import Context from './Context'
 import RenderProps from './RenderProps'
 import Cors from './Cors'
+import Hof from './Hof'
 
 class App extends Component {
   render() {
@@ -30,7 +31,11 @@ class App extends Component {
             return <div>It's false so I'm rendering this!</div>
           }
         }} />
+<<<<<<< Updated upstream
         <Route path="/cors" component={Cors} />
+=======
+        <Route path="/hof" component={Hof} />
+>>>>>>> Stashed changes
       </div>
     );
   }
