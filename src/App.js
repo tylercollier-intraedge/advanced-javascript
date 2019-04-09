@@ -31,11 +31,8 @@ class App extends Component {
             return <div>It's false so I'm rendering this!</div>
           }
         }} />
-<<<<<<< Updated upstream
         <Route path="/cors" component={Cors} />
-=======
         <Route path="/hof" component={Hof} />
->>>>>>> Stashed changes
       </div>
     );
   }
