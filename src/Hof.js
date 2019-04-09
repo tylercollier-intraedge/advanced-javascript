@@ -7,7 +7,6 @@ export class Hof extends Component {
       counter: 0
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handleClick = debounce(this.handleClick)
   }
 
   handleClick() {
